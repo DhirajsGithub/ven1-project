@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import colors from "../constants/colors";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -9,12 +9,14 @@ import { FontAwesome } from "@expo/vector-icons";
 import ButtonComp from "../components/ButtonComp";
 import Banner from "../components/Banner";
 import Bookings from "../components/Bookings";
+import { StatusBar } from "expo-status-bar";
 
 const HomePage = () => {
   const handlePressGroup = () => {};
   const handlePressProfile = () => {};
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
+      <StatusBar style="light" />
       <SafeAreaView>
         <View style={styles.headerIcons}>
           <ButtonComp
@@ -46,7 +48,7 @@ const HomePage = () => {
           <Bookings />
         </View>
       </SafeAreaView>
-    </View>
+    </ScrollView>
   );
 };
 

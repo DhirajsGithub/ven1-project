@@ -191,6 +191,7 @@ const styles = StyleSheet.create({
   footer: {
     flex: 1,
     marginTop: Platform.OS === "android" ? "8%" : "35%",
+    marginBottom: 20,
   },
   contain: {
     // position: "absolute",
